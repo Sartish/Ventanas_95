@@ -17,23 +17,22 @@ const Footer = () => {
 
 
 	return (
-		<footer id="navbar-main" className="navbar flex w-full flex-row items-center navbar-main navbar-dark justify-between">
+		<footer id="navbar-footer" className="navbar flex w-full flex-row items-center navbar-main navbar-dark justify-between w-full">
 			<ul className="navbar-nav navbar-nav-hover flex flex-row items-center">
 				<li className="nav-item">
 					<a href="index.html" className="nav-link" role="button">
 						<span className="nav-link-inner-text">📺 Start</span>
 					</a>
 				</li>
-				<li className="nav-item">
-					<a href="docs/introduction.html" className="nav-link" role="button">
-						<span className="nav-link-inner-text">📕 Docs</span>
+				<li className="time">
+					<a href="docs/introduction.html" role="button">
+						<span className="nav-link-inner-text">Welcome</span>
 					</a>
 				</li>
 			</ul>
 			<div className="time text-center">
 				<span className="text-uppercase"> Time: {date.toLocaleTimeString()}</span>
 			</div>
-
 		</footer>
 	)
 }

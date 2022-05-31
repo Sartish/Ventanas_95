@@ -1,11 +1,15 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
-import Footer from './components/footer'
+import Footer from './components/Footer'
+import InfoCard from './components/InfoCardClient'
+import Navbar from './components/Navbar'
+import WelcomeCard from './components/WelcomeCard'
+
 
 const Home: NextPage = () => {
 	return (
-		<div className="flex min-h-screen flex-col items-center justify-center py-2">
+		<div className="w-screen h-screen bg-secondary">
 			<Head>
 				<title>Create Next App</title>
 				<link rel="icon" href="/favicon.ico" />
@@ -13,12 +17,18 @@ const Home: NextPage = () => {
 			<header className="header-global">
 				<h1>Ventanas 95</h1>
 			</header>
-			<main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
-				<h1>some kind of body here</h1>
+			<main className="flex justify-between flex-col md:flex-row border-2 border-solid border-black">
+				<Navbar />
+				<div className="border-2 border-solid border-black flex items-center">
+					<WelcomeCard />
+				</div>
+				<div>
+				</div>
 			</main>
-
-			<Footer />
-		</div>
+			<footer className="fixed bottom-0 w-full">
+				<Footer />
+			</footer>
+		</div >
 	)
 }
 
